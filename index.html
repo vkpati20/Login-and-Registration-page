@@ -1,10 +1,45 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html>
 <head>
-  <meta charset="UTF-8">
 	<title>Login and Registration Form Design</title>
 </head>
-<body style = "background-color: black; color: white">
-  <h1>HELLO WORLD</h1>
+<body>
+	<div class="login-page">
+		<div class="form">
+		
+			<!-- form is used for sending messages to the server. U need form for server side interaction because it has methods -->
+			<form class = "register-form">
+				<input type="text" placeholder="Username">
+				<input type="text" placeholder="Password"/>
+				<input type="text" placeholder="Email ID"/>
+			<button>Create</button>
+			<p class="message">Already Registered? <a href = "#">Login</a></p>
+
+			</form>
+<!-- /////////////////////////////////////////////////////////////////// -->
+			<form class="login-form">
+				<input type="text" placeholder="Username"/>
+				<input type="text" placeholder="Password">
+				<button>login</button>
+				<p class="message">Not Registered? <a href = "#">Register</a></p>
+			</form>
+		
+
+		</div>
+	</div>
+
+
+<script src='https://code.jquery.com/jquery-3.3.1.min.js'>
+</script>
+
+
+<script>
+	$('.message a').click( function()
+	{
+		
+		$('form').animate({height: "toggle", opacity: "toggle"}, "slow")
+	})
+</script>
+
 </body>
 </html>
